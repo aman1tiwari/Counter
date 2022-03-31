@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .container {
+          align-content: center;
+        display: flex;
+      }
+      #count {
+        margin-top: 1%;
+        font-size: 30px;
+      }
+      button {
+        margin: 1%;
+        width: 3%;
+        height: 3%;
+        font-size: 30px;
+        background-color: #e5e5e7;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <button type="button" onclick="decrement()">-</button>
+        <div style="text-align:center" id="count"></div>
+        <button type="button" onclick="increment()">+</button>
+    </div>
+    <script>
+        var x=0;
+        document.getElementById("count").innerHTML=x;
+        function increment(){
+          x=x+1;
+          document.getElementById("count").innerHTML=x;
+        }
+        function decrement(){
+            x=x-1;
+            document.getElementById("count").innerHTML=x;
+        }
+    </script>
+  </body>
+</html>
